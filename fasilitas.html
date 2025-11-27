@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fasilitas | MTS AL-HIKMAH</title>
 
-  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="Assets/Style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- 🌿 Modern & Elegant CSS -->
   <style>
@@ -186,27 +186,34 @@
 
     <div class="row g-4">
 
-      <?html
-      $fasilitas = [
-        ['Toilet', 'Toilet.jpg'],
-        ['Ruang Kelas', 'Kelas.jpg'],
-        ['Gedung Sekolah', 'Gedung.jpg'],
-      ];
-
-      foreach ($fasilitas as $f) {
-        echo "
-        <div class='col-md-4 d-flex justify-content-center'>
-          <div class='card shadow-sm fade-in' onclick=\"openLightbox('Assets/IMG/$f[1]')\" style='width: 100%; max-width: 350px;'>
-            <img src='Assets/IMG/$f[1]' class='card-img-top' alt='$f[0]'>
-            <div class='card-body text-center'>
-              <h5 class='card-title mb-2'>$f[0]</h5>
-            </div>
-          </div>
-        </div>";
-      }
-      ?>
-
+  <!-- Fasilitas 1 -->
+  <div class="col-md-4 d-flex justify-content-center">
+    <div class="card shadow-sm fade-in" onclick="openLightbox('Assets/IMG/Toilet.jpg')" style="width: 100%; max-width: 350px;">
+      <img src="Assets/IMG/Toilet.jpg" class="card-img-top" alt="Toilet">
+      <div class="card-body text-center">
+        <h5 class="card-title mb-2">Toilet</h5>
+      </div>
     </div>
+  </div>
+       <!-- Fasilitas 2 -->
+  <div class="col-md-4 d-flex justify-content-center">
+    <div class="card shadow-sm fade-in" onclick="openLightbox('Assets/IMG/Kelas.jpg')" style="width: 100%; max-width: 350px;">
+      <img src="Assets/IMG/Kelas.jpg" class="card-img-top" alt="Ruang Kelas">
+      <div class="card-body text-center">
+        <h5 class="card-title mb-2">Ruang Kelas</h5>
+      </div>
+    </div>
+  </div>
+      <!-- Fasilitas 3 -->
+  <div class="col-md-4 d-flex justify-content-center">
+    <div class="card shadow-sm fade-in" onclick="openLightbox('Assets/IMG/Gedung.jpg')" style="width: 100%; max-width: 350px;">
+      <img src="Assets/IMG/Gedung.jpg" class="card-img-top" alt="Gedung Sekolah">
+      <div class="card-body text-center">
+        <h5 class="card-title mb-2">Gedung Sekolah</h5>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
 </section>
 
@@ -233,4 +240,5 @@
 
 </body>
 </html>
+
 
