@@ -1,8 +1,8 @@
-<?php 
+<?html 
 $title = "Kontak Sekolah";
-include 'includes/header.php'; 
-include 'includes/navbar.php'; 
-include 'DB/koneksi.php'; 
+include 'includes/header.html'; 
+include 'includes/navbar.html'; 
+include 'DB/koneksi.html'; 
 
 $notif = '';
 if (isset($_POST['kirim'])) {
@@ -49,4 +49,5 @@ if (isset($_POST['kirim'])) {
   </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?html include 'includes/footer.html'; ?>
+
