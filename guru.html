@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guru | MTS AL-HIKMAH</title>
 
-  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="Assets/Style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- ===== MODERN UI/UX STYLE ===== -->
   <style>
@@ -103,27 +103,25 @@
     <hr style="width:70px;height:3px;background:#d4af37;border:none;margin:10px auto 30px;">
 
     <div class="row g-4">
-      <?html
-      $guru = [
-        ['Ahmad Syaifudin, S.Pd', 'Kepala Sekolah', 'guru1.jpg'],
-        ['Nur Aini, S.Pd.I', 'Guru Bahasa Arab', 'guru2.jpg'],
-        ['Muhammad Zaki, S.Pd', 'Guru Matematika', 'guru3.jpg'],
-        ['Siti Rahmawati, S.Pd', 'Guru IPA', 'guru4.jpg'],
-      ];
-
-      foreach ($guru as $g) {
-        echo "
-        <div class='col-md-3'>
+          <div class='col-md-3'>
           <div class='card shadow-sm'>
-            <img src='Assets/IMG/$g[2]' class='card-img-top' alt='$g[0]'>
+            <img src='Assets/Img/guru1.jpg' class='card-img-top' alt='$g[0]'>
             <div class='card-body'>
-              <h5 class='card-title'>$g[0]</h5>
-              <p class='card-text'>$g[1]</p>
+              <h5 class='card-title'>Ahmad Syaifudin, S.Pd</h5>
+              <p class='card-text'>Kepala Sekolah</p>
             </div>
           </div>
-        </div>";
-      }
-      ?>
+        </div>
+        <div class='col-md-3'>
+          <div class='card shadow-sm'>
+            <img src='Assets/Img/guru2.jpg' class='card-img-top' alt='$g[0]'>
+            <div class='card-body'>
+              <h5 class='card-title'>yosep kristul, S.Pd</h5>
+              <p class='card-text'>Kepala Sekolah</p>
+            </div>
+          </div>
+        </div>
+      
     </div>
   </div>
 </section>
@@ -134,4 +132,5 @@
 
 </body>
 </html>
+
 
