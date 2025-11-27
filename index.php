@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTS AL-HIKMAH | Profil Sekolah</title>
+  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    :root {
+      --hijau: #1b5e20;
+      --emas: #d4af37;
+      --gelap: #0d1b2a;
+      --abu: #f7f7f7;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* 🌿 NAVBAR */
+    .navbar { background-color: #fff; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+    .navbar-brand span { color: var(--hijau); font-weight: 700; font-size: 1.3rem; }
+    .nav-link { color: #333 !important; font-weight: 500; margin-left: 1rem; position: relative; }
+    .nav-link::after { content: ""; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background-color: var(--emas); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link:hover { color: var(--hijau) !important; }
+
+    /* 🌙 HERO */
+    .hero {
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(27, 94, 32, 0.6);
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero h1 { font-size: 3rem; font-weight: 700; }
+    .btn-emas { background-color: var(--emas); color: #000; font-weight: 600; border-radius: 30px; padding: 10px 25px; }
+    .btn-emas:hover { background-color: #caa436; color: #fff; }
+
+    /* 🌸 SECTION */
+    section h2 { color: var(--hijau); font-weight: 700; }
+    section hr { width: 70px; height: 3px; background-color: var(--emas); border: none; margin: 10px auto 30px; }
+
+    /* Hubungi Kami */
+     .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+
+    /* FOOTER */
+    footer {
+      background: var(--gelap);
+      color: #ddd;
+      padding: 50px 0;
+    }
+    footer h5 { color: #fff; font-weight: 600; }
+    footer a { color: #ccc; text-decoration: none; }
+    footer a:hover { color: var(--emas); }
+
+  /* Hamburger menu warna agar terlihat */
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(27,94,32,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Pastikan menu collapse terlihat saat HP */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .nav-link {
+    color: #1b5e20 !important;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  .navbar-brand span {
+    color: #1b5e20 !important;
+  }
+}
+.navbar {
+    z-index: 1030;
+}
+.navbar-toggler {
+    z-index: 1050;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- 🌿 NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.php">
+      <img src="Assets/IMG/SMP LOGO.png" width="45" height="45" class="me-2" alt="Logo">
+      <span style="margin-left:5px;">MTS AL-HIKMAH</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#visimisi">Visi & Misi</a></li>
+        <li class="nav-item"><a class="nav-link" href="guru.php">Guru</a></li>
+        <li class="nav-item"><a class="nav-link" href="fasilitas.php">Fasilitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Hubungi</a></li>
+        <li class="nav-item"><a class="nav-link" href="psb.php">PSB</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🌙 HERO -->
+<section class="hero" id="beranda">
+  <div class="hero-content">
+    <h1>MTS AL-HIKMAH</h1>
+    <p>Mencetak Generasi Islami, Cerdas, dan Berakhlakul Karimah</p>
+    <a href="#profil" class="btn btn-emas">Pelajari Lebih Lanjut</a>
+  </div>
+</section>
+
+<script>
+  const hero = document.querySelector('.hero');
+  const images = ['Assets/IMG/banner1.jpg', 'Assets/IMG/banner2.jpg', 'Assets/IMG/banner3.jpg'];
+  let i = 0;
+  function changeBg() {
+    hero.style.backgroundImage = `url('${images[i]}')`;
+    i = (i + 1) % images.length;
+  }
+  changeBg();
+  setInterval(changeBg, 4000);
+
+  // Tutup hamburger menu otomatis saat link diklik
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse.classList.contains('show')) {
+      new bootstrap.Collapse(navbarCollapse).toggle();
+    }
+  });
+});
+
+</script>
+
+<!-- 🕌 PROFIL -->
+<section id="profil" class="py-5">
+  <div class="container text-center">
+    <h2>Profil Sekolah</h2>
+    <hr>
+    <div class="row align-items-center">
+      <div class="col-md-6"><img src="Assets/IMG/sekolah1.jpg" class="img-fluid" alt="Sekolah"></div>
+      <div class="col-md-6">
+       <p style="text-align: justify;">
+      MTS Al-Hikmah Kalibeber merupakan lembaga pendidikan formal tingkat menengah pertama yang berada di bawah naungan Yayasan Pondok Pesantren Ittihadut Tholibin. Sekolah ini resmi didirikan pada tahun 2025, setelah proses peletakan batu pertama dilakukan pada tahun 2024 oleh Dr. KH. Ichwan Qomari, M.Ag dan Ibu Nyai Hj. Umi Fatma, S.H., Alhz. Kehadiran MTS Al-Hikmah menjadi wujud komitmen yayasan dalam memperluas akses pendidikan Islam yang berkualitas bagi masyarakat Kalibeber dan sekitarnya.
+      </p>
+
+    <p style="text-align: justify;">
+      Nama "Al-Hikmah", yang berarti kebijaksanaan, dipilih sebagai identitas sekolah yang mencerminkan harapan besar agar seluruh peserta didik tidak hanya menguasai ilmu pengetahuan, tetapi juga memiliki akhlak mulia, karakter islami, serta kemampuan berpikir yang matang dan bijaksana. Semangat ini menjadi fondasi utama dalam penyelenggaraan pendidikan, sehingga MTS Al-Hikmah hadir sebagai sekolah yang memadukan nilai-nilai keislaman dengan perkembangan ilmu pengetahuan dan teknologi.
+    </p>
+
+    <p style="text-align: justify;">
+      Melalui lingkungan belajar yang religius, disiplin, dan inspiratif, MTS Al-Hikmah berkomitmen melahirkan generasi muda yang unggul, berakhlakul karimah, terampil, serta siap bersaing di tingkat lokal, nasional, maupun internasional. Dengan dukungan tenaga pendidik profesional, kurikulum terpadu, serta berbagai fasilitas penunjang belajar, sekolah ini menjadi wadah bagi siswa untuk mengembangkan potensi akademik, spiritual, maupun keterampilan praktis.
+    </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌿 VISI MISI -->
+<section id="visimisi" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2>Visi & Misi</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="text-success fw-bold">Visi</h5>
+        <p style="text-align: justify;">Terbentuknya peserta didik yang Akhlaqul Karimah, Terampil, Unggul berlandaskan Al-Qur'an Mici</p>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-success fw-bold text-start">Misi</h5>
+
+     <ul style="padding-left: 20px; text-align: justify;">
+     <li>Mengintegrasikan lingkungan pembelajaran yang bertumpu pada keteladanan untuk membentuk Akhlaqul Karimah berbasis Tahfidzul Qur'an.</li>
+     <li>Menguasai ilmu pengetahuan dan teknologi sesuai perkembangan zaman.</li>
+     <li>Mewujudkan siswa yang berdaya mampu bersaing lokal, nasional dan internasional.</li>
+     </ul>
+
+      </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌐 HUBUNGI KAMI -->
+<section id="kontak" class="py-5">
+  <div class="container text-center">
+    <h2>Hubungi Kami</h2>
+    <hr>
+
+    <div class="row mt-4 align-items-center">
+
+     <!-- Informasi Kontak -->
+<div class="col-md-6 text-start" style="text-align: justify;">
+  <h5 class="fw-bold text-success">Informasi Kontak</h5>
+  <p><i class="bi bi-geo-alt-fill text-success"></i> Jl. Jawar, Bumirejo, Kalibeber, Kec. Mojotengah, Kabupaten Wonosobo, Jawa Tengah 56351, Indonesia</p>
+  <p><i class="bi bi-telephone-fill text-success"></i> +62 87-8435-63709</p>
+  <p><i class="bi bi-envelope-fill text-success"></i> mtsalhikmahittihaduttholibinth@gmail.com</p>
+  <p><i class="bi bi-clock-fill text-success"></i> Senin - Sabtu (07.00 - 15.00)</p>
+</div>
+
+      <!-- MAPS -->
+      <div class="col-md-6">
+        <div class="map-container">
+         <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3363884777771!2d109.90518536947563!3d-7.315023269353179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e700a8627ef9e81%3A0x9013ac9c41a1768!2sHusna%20Computer!5e0!3m2!1sen!2sid!4v1763986252610!5m2!1sen!2sid" 
+  width="100%" 
+  height="300" 
+  style="border:0;" 
+  loading="lazy" 
+  allowfullscreen>
+</iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+<div class="container py-4">
+<div class="row">
+
+
+<!-- Identitas -->
+<div class="col-md-4 mb-4">
+<h5 class="fw-bold">MTS AL-HIKMAH </h5>
+<p>Jl. Jawar, Bumirejo, Kalibeber, Kec. Mojotengah,<br>Kabupaten Wonosobo, Jawa Tengah 56351, Indonesia</p>
+</div>
+
+
+<!-- Link Cepat -->
+<div class="col-md-4 mb-4">
+<h5 class="fw-bold">Link Cepat</h5>
+<ul class="list-unstyled">
+<li><a href="psb.php">Pendaftaran</a></li>
+</ul>
+</div>
+
+
+<!-- Sosial Media -->
+<div class="col-md-4 mb-4">
+<h5 class="fw-bold">Media Sosial</h5>
+<a href="https://wa.me/6287843563709" class="d-block mb-2"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+<a href="https://www.instagram.com/mtsalhikmah.official?igsh=MWVzODRqbjg2bGh2eA==" class="d-block mb-2"><i class="bi bi-instagram"></i> Instagram</a>
+<a href="mailto:mtsalhikmahittihaduttholibinth@gmail.com" class="d-block mb-2"><i class="bi bi-envelope-fill"></i> Email</a>
+
+</div>
+</div>
+<div class="text-center mt-3 pt-3 border-top">
+<p class="mb-0">© 2025 MTS AL-HIKMAH | Tim IT ITTIHAD MEDIA</p>
+</div>
+</div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</body>
+</html>

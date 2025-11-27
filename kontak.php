@@ -1,0 +1,52 @@
+<?php 
+$title = "Kontak Sekolah";
+include 'includes/header.php'; 
+include 'includes/navbar.php'; 
+include 'DB/koneksi.php'; 
+
+$notif = '';
+if (isset($_POST['kirim'])) {
+    $nama = mysqli_real_escape_string($db, $_POST['nama']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+    $pesan = mysqli_real_escape_string($db, $_POST['pesan']);
+
+    $query = "INSERT INTO kontak (nama, email, pesan) VALUES ('$nama', '$email', '$pesan')";
+    if (mysqli_query($db, $query)) {
+        $notif = '<div class="alert alert-success">Pesan berhasil dikirim!</div>';
+    } else {
+        $notif = '<div class="alert alert-danger">Gagal mengirim pesan.</div>';
+    }
+}
+?>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Hubungi Kami</h2>
+  <?= $notif; ?>
+  <div class="row">
+    <div class="col-md-6">
+      <form action="" method="post">
+        <div class="mb-3">
+          <label>Nama</label>
+          <input type="text" name="nama" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label>Pesan</label>
+          <textarea name="pesan" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h5>Alamat:</h5>
+      <p>Jl. Contoh No. 1, Kecamatan, Kabupaten</p>
+      <p>Telepon: (0271) 123456</p>
+      <p>Email: info@namasekolah.sch.id</p>
+    </div>
+  </div>
+</div>
+
+<?php include 'includes/footer.php'; ?>

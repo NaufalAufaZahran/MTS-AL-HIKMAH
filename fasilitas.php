@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fasilitas | MTS AL-HIKMAH</title>
+
+  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 🌿 Modern & Elegant CSS -->
+  <style>
+    body {
+        background: #f4f6fa;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 0;
+        transition: 0.3s;
+    }
+    .navbar .nav-link {
+        font-weight: 600;
+        font-size: 16px;
+        color: #2d2d2d !important;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    .navbar .nav-link:hover {
+        background: #e8f5e9;
+        color: #2e7d32 !important;
+        transform: translateY(-2px);
+    }
+
+    /* SECTION TITLE */
+    h2 {
+        font-weight: 700;
+        color: #1b5e20;
+        letter-spacing: 0.5px;
+    }
+
+    hr.section-line {
+        width: 90px;
+        height: 4px;
+        background: #d4af37;
+        border: none;
+        margin: 12px auto 35px;
+        border-radius: 10px;
+    }
+
+    /* GLOBAL DESCRIPTION */
+    .desc-global {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #444;
+        text-align: justify;
+    }
+
+    /* CARD FASILITAS */
+    .card {
+        border-radius: 18px;
+        overflow: hidden;
+        border: none;
+        background: #ffffff;
+        transition: 0.35s ease;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        cursor: pointer;
+    }
+    .card img {
+        height: 260px;
+        object-fit: cover;
+        border-bottom: 3px solid #e6e6e6;
+        transition: all 0.45s ease;
+        transform-origin: center;
+    }
+
+    /* 🌟 Hover Zoom-Out Animasi */
+    .card:hover img {
+        transform: scale(1.08) translateY(-6px);
+        filter: brightness(1.05) contrast(1.05);
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 16px 36px rgba(0,0,0,0.16);
+    }
+
+    /* ANIMASI FADE */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(25px);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* 🔥 LIGHTBOX POPUP */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.85);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        backdrop-filter: blur(3px);
+    }
+
+    .lightbox img {
+        max-width: 92%;
+        max-height: 82%;
+        border-radius: 12px;
+        animation: zoomIn 0.35s ease;
+        box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    @keyframes zoomIn {
+        from { transform: scale(0.6); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .lightbox-close:hover {
+        color: #ffdf5e;
+        transform: scale(1.2);
+    }
+
+    /* FOOTER */
+    footer {
+        background: linear-gradient(90deg, #2e7d32, #1b5e20);
+        font-size: 15px;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🌿 NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
+    <a href="index.php" class="navbar-brand fw-bold text-success">MTS AL-HIKMAH</a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 🏫 FASILITAS -->
+<section class="py-5 mt-5">
+  <div class="container text-center fade-in">
+    <h2>Fasilitas Sekolah</h2>
+    <hr class="section-line">
+
+    <!-- DESKRIPSI UMUM -->
+    <p class="desc-global">
+      Fasilitas di MTS Al-Hikmah saat ini masih dalam tahap pengembangan sekitar 90%. 
+      Berbagai sarana seperti ruang kelas, gedung utama, dan area pendukung telah dibangun 
+      dan mulai digunakan, namun masih dalam proses penyempurnaan. Pembangunan ini ditargetkan 
+      selesai sepenuhnya pada bulan <strong>Desember 2025</strong>, sehingga mampu memberikan 
+      lingkungan belajar yang lebih nyaman, modern, dan representatif bagi seluruh peserta didik.
+    </p>
+
+    <div class="row g-4">
+
+      <?php
+      $fasilitas = [
+        ['Toilet', 'Toilet.jpg'],
+        ['Ruang Kelas', 'Kelas.jpg'],
+        ['Gedung Sekolah', 'Gedung.jpg'],
+      ];
+
+      foreach ($fasilitas as $f) {
+        echo "
+        <div class='col-md-4 d-flex justify-content-center'>
+          <div class='card shadow-sm fade-in' onclick=\"openLightbox('Assets/IMG/$f[1]')\" style='width: 100%; max-width: 350px;'>
+            <img src='Assets/IMG/$f[1]' class='card-img-top' alt='$f[0]'>
+            <div class='card-body text-center'>
+              <h5 class='card-title mb-2'>$f[0]</h5>
+            </div>
+          </div>
+        </div>";
+      }
+      ?>
+
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 LIGHTBOX POPUP -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<footer class="text-center py-3 mt-5">
+  <p>© 2025 <span class="text-warning">MTS AL-HIKMAH</span> | Semua Hak Dilindungi</p>
+</footer>
+
+<script>
+  function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

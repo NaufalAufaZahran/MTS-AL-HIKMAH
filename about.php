@@ -1,0 +1,22 @@
+<?php 
+$title = "Tentang Sekolah";
+include 'includes/header.php'; 
+include 'includes/navbar.php'; 
+?>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Tentang Sekolah</h2>
+  <p>Sekolah ini berdiri sejak tahun XXXX dengan tujuan memberikan pendidikan berkualitas berbasis karakter dan nilai-nilai moral. Kami memiliki visi menjadi lembaga pendidikan unggulan yang menghasilkan generasi berprestasi dan berakhlak mulia.</p>
+
+  <h4>Visi</h4>
+  <p>Menjadi sekolah unggulan dalam prestasi akademik dan non-akademik.</p>
+
+  <h4>Misi</h4>
+  <ul>
+    <li>Meningkatkan mutu pembelajaran.</li>
+    <li>Menanamkan nilai-nilai religius dan sosial.</li>
+    <li>Mengembangkan potensi peserta didik secara optimal.</li>
+  </ul>
+</div>
+
+<?php include 'includes/footer.php'; ?>

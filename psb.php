@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir PSB | MTS Al-Hikmah</title>
+
+  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f7f7f7; }
+    .navbar { background-color: #fff; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+    .navbar-brand span { color: #1b5e20; font-weight: 700; font-size: 1.3rem; }
+
+    .nav-link { 
+        color: #333 !important; 
+        font-weight: 500; 
+        margin-left: 1rem; 
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    .nav-link.active::after,
+    .nav-link:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #1b5e20;
+        border-radius: 5px;
+        animation: slide 0.25s ease-out;
+    }
+
+    @keyframes slide { from { width: 0; } to { width: 100%; } }
+
+    section { padding: 80px 0; }
+    .section-title { font-size: 28px; font-weight: 700; color: #1b5e20; }
+
+    .flow-step {
+      background: #fff;
+      padding: 17px;
+      border-left: 5px solid #1b5e20;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .form-container {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
+
+    .btn-hijau {
+      background-color: #1b5e20;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 10px 25px;
+    }
+    .btn-hijau:hover { background-color: #2e7d32; }
+
+    footer {
+      background-color: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Banner */
+    .banner-psb img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      margin-top: 70px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    /* ==================== JUDUL DI TENGAH BANNER ==================== */
+    .banner-wrapper {
+      position: relative;
+    }
+
+    .banner-title {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 38px;
+      font-weight: 800;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.8);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <!-- LOGO + BRAND -->
+    <a class="navbar-brand d-flex align-items-center" href="index.php">
+      <img src="Assets/IMG/SMP LOGO.png" width="45" height="45" class="me-3">
+      <span style="margin-left:5px;">MTS AL-HIKMAH</span>
+    </a>
+
+    <!-- MENU BERANDA -->
+    <a class="nav-link ms-3 fw-bold text-success" href="index.php" id="berandaMenu">Beranda</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#informasi">Informasi Pendaftaran</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#alur">Alur Pendaftaran</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#formulir">Formulir Pendaftaran</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ===================== BANNER + JUDUL ===================== -->
+<div class="banner-wrapper">
+  <div class="banner-psb">
+    <img src="Assets/IMG/sekolah.jpg" alt="Banner PSB MTS Al-Hikmah">
+  </div>
+
+  <div class="banner-title">
+    PENERIMAAN SISWA BARU <br> MTs AL-HIKMAH 2026
+  </div>
+</div>
+<!-- ============================================================ -->
+
+<!-- ===================== INFORMASI ===================== -->
+<section id="informasi">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Informasi Pendaftaran</h2>
+
+    <img src="Assets/IMG/brosur1.jpg" alt="Brosur PSB" class="img-fluid rounded shadow mb-3">
+    <img src="Assets/IMG/brosur2.jpg" alt="Brosur PSB" class="img-fluid rounded shadow">
+
+    <!-- ========== TAMBAHAN TOMBOL DOWNLOAD PDF ========== -->
+    <div class="mt-4">
+      <a href="Assets/PDF/Brosur_Pendaftaran.pdf" class="btn btn-success me-2" download>
+        <i class="bi bi-file-earmark-arrow-down"></i> Download Brosur Pendaftaran (PDF)
+      </a>
+
+      <a href="Assets/PDF/Formulir_Pendaftaran.pdf" class="btn btn-primary" download>
+        <i class="bi bi-file-earmark-text"></i> Download Formulir Pendaftaran (PDF)
+      </a>
+    </div>
+    <!-- ================================================== -->
+
+  </div>
+</section>
+
+<!-- ===================== ALUR PENDAFTARAN ===================== -->
+<section id="alur">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Alur Pendaftaran</h2>
+
+    <div class="flow-step"><b>1. Mengisi Formulir PSB Online</b></div>
+    <div class="flow-step"><b>2. Upload Dokumen</b></div>
+    <div class="flow-step"><b>3. Verifikasi Berkas</b></div>
+    <div class="flow-step"><b>4. Daftar Ulang</b></div>
+    <div class="flow-step"><b>5. Pengukuran Seragam</b></div>
+
+  </div>
+</section>
+
+<!-- Formulir Pendaftaran -->
+<section class="d-flex justify-content-center" id="formulir">
+  <div class="p-4 p-md-5 shadow rounded" 
+       style="max-width: 700px; width: 100%; background: #ffffff;">
+
+    <h2 class="text-success fw-bold mb-4 text-center">Formulir Pendaftaran Online</h2>
+
+    <p class="mb-4 text-center" style="font-size:1.1rem;">
+      Untuk memudahkan proses pendaftaran dan pengumpulan data, kami menggunakan Google Form.
+      Silakan klik tombol di bawah untuk membuka formulir pendaftaran online.  
+      Pastikan data yang Anda isi sudah benar sebelum mengirimkan.
+    </p>
+
+    <div class="text-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnYnxG8s2QPPx8SXddYS0_I1QZ-hSKdH4cvbHtOooTHNkO4g/viewform?usp=header" 
+         target="_blank" 
+         class="btn btn-primary btn-lg px-5 d-inline-flex align-items-center">
+        <i class="bi bi-pencil-square me-2"></i>
+        Buka Formulir Pendaftaran
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2025 MTS Al-Hikmah | Formulir PSB</footer>
+
+<!-- ===================== SCRIPT ===================== -->
+<script>
+
+// NAVBAR ACTIVE
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+</script>
+
+</body>
+</html>

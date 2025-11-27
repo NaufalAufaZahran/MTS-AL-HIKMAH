@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guru | MTS AL-HIKMAH</title>
+
+  <link href="Assets/Style/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="Assets/Style/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===== MODERN UI/UX STYLE ===== -->
+  <style>
+    body {
+        background: #f7f9fc;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 0;
+        transition: 0.3s;
+    }
+    .navbar .nav-link {
+        font-weight: 600;
+        font-size: 16px;
+        color: #2d2d2d !important;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    .navbar .nav-link:hover {
+        background: #e8f5e9;
+        color: #2e7d32 !important;
+        transform: translateY(-2px);
+    }
+
+    /* JUDUL */
+    h2 {
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #1b5e20;
+    }
+
+    /* CARD GURU */
+    .card {
+        border-radius: 18px;
+        overflow: hidden;
+        transition: 0.35s ease;
+        border: none;
+        background: #ffffff;
+    }
+    .card img {
+        height: 260px;
+        object-fit: cover;
+        border-bottom: 3px solid #e0e0e0;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+
+    .card-title {
+        font-weight: 700;
+        color: #2e7d32 !important;
+        margin-bottom: 6px;
+    }
+
+    .card-text {
+        font-size: 14px;
+        color: #555;
+        opacity: 0.9;
+    }
+
+    /* FOOTER */
+    footer {
+        background: linear-gradient(90deg, #2e7d32, #1b5e20);
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- 🌿 NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+  <div class="container">
+    <div class="container">
+    <a href="index.php" class="navbar-brand fw-bold text-success">MTS AL-HIKMAH</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 👨‍🏫 GURU -->
+<section class="py-5 mt-5">
+  <div class="container text-center">
+    <h2>Profil Tenaga Pendidik</h2>
+    <hr style="width:70px;height:3px;background:#d4af37;border:none;margin:10px auto 30px;">
+
+    <div class="row g-4">
+      <?php
+      $guru = [
+        ['Ahmad Syaifudin, S.Pd', 'Kepala Sekolah', 'guru1.jpg'],
+        ['Nur Aini, S.Pd.I', 'Guru Bahasa Arab', 'guru2.jpg'],
+        ['Muhammad Zaki, S.Pd', 'Guru Matematika', 'guru3.jpg'],
+        ['Siti Rahmawati, S.Pd', 'Guru IPA', 'guru4.jpg'],
+      ];
+
+      foreach ($guru as $g) {
+        echo "
+        <div class='col-md-3'>
+          <div class='card shadow-sm'>
+            <img src='Assets/IMG/$g[2]' class='card-img-top' alt='$g[0]'>
+            <div class='card-body'>
+              <h5 class='card-title'>$g[0]</h5>
+              <p class='card-text'>$g[1]</p>
+            </div>
+          </div>
+        </div>";
+      }
+      ?>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center text-white py-3 mt-5">
+  <p>© 2025 <span class="text-warning">MTS AL-HIKMAH</span> | Semua Hak Dilindungi</p>
+</footer>
+
+</body>
+</html>
