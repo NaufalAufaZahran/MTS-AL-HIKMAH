@@ -6,7 +6,6 @@
   <title>Fasilitas | MTS AL-HIKMAH</title>
 
   <link href="Assets/Style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <script src="Assets/Style/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- 🌿 Modern & Elegant CSS -->
   <style>
@@ -156,18 +155,33 @@
 </head>
 <body>
 
-<!-- 🌿 NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
   <div class="container">
-    <a href="index.html" class="navbar-brand fw-bold text-success">MTS AL-HIKMAH</a>
+    <a href="index.html" class="navbar-brand fw-bold text-success">
+      MTS AL-HIKMAH
+    </a>
 
+    <!-- ✅ TOMBOL HAMBURGER (INI YANG KURANG) -->
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Beranda</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- 🏫 FASILITAS -->
 <section class="py-5 mt-5">
@@ -237,9 +251,11 @@
       document.getElementById('lightbox').style.display = 'none';
   }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
 
 
 
